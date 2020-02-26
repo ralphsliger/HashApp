@@ -1,22 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=  <div class="card-body">
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>APP ARQUITECTURA</title>
+    <!-- BOOSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/lux/bootstrap.min.css">
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Lacquer&display=swap" rel="stylesheet">
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+  </head>
+  <body>
+    <main class="container p-4">
+      <h1 class="display-4 text-center title mt-4">Hash App</h1>
+      <div class="row">
 
+          <div class="col-md-8 offset-md-2 ">
 
-        <ul class="list-group">
-            <!-- listar hash de la base de datos-->
-            {% for i in task %}
-            <li class="list-group-item">
-                <span>{{task.content}}</span>>
-            </li>
-            {% endfor %}
-        </ul>
-    </div>, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
+              <div class="card">
+
+                  <div class="card-body">
+
+                    <table class="table table-bordered table-striped text-center" >
+                          <!-- listar hash de la base de datos-->
+                          <thead>
+                            <tr>
+                              <th scope="col">Hash</th>
+                              <th scope="col">Normal</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {% for task in tasks %}
+                            <tr>
+                                <td>{{task.index}}</td>
+                                <td style="word-break: break-all;">{{task.hash}}</td>
+                            </tr>
+                          {% endfor %}
+                        </tbody>
+                    </table>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+  </main>
+
 </body>
-</html>
+

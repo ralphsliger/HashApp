@@ -12,6 +12,6 @@
   `Docker Built -t hashapp . `
 
 #### Correr proyecto con Docker
-  `docker run -it —publish 7000:8000  hashapp
+  `docker run -it —publish 7000:8000  hashapp`
 
   

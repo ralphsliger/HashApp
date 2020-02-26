@@ -1,15 +1,17 @@
 # HashApp
 
-## Iniciar Proyecto 
+## Ejecutar Proyecto Con Flask
 #### Activar entorno virtual 
   `source api-env/bin/activate`
 #### Ejecutar flask
   `python app.py`
 
-#### Iniciar Docker
-  `Docker Built -t flaskapp . `
+## Ejecutar Proyecto con Docker
 
-#### Correr Docker
-  `docker run -it —publish 7000:8000  flaskapp`
+#### Construir Docker
+  `Docker Built -t hashapp . `
+
+#### Correr proyecto con Docker
+  `docker run -it —publish 7000:8000  hashapp
 
   
